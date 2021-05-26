@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+:root {
+  --Text: #33445d;
+  --Text2: #86909f;
+  --Text3: #fff;
+  --background: #f4f6f7;
+  --background2: #ffffff;
+  --backgoundItems: #007bff;
+  --backgoundItems2: rgba(96, 125, 139, 0.2);
+  --secundariColor: #fd7e14;
+  --degradado: linear-gradient(red, yellow);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+/* HEADER */
+.header {
+  /* border: 1px solid red; */
+  height: 100vh;
+  background: url("https://www.devaradise.com/about-syakir/assets/img/cover-bg.png");
+}
+/* .wrap-info-header {
+  border: 1px solid green;
+} */
+.wrap-info-profil {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /*  border: 1px solid rebeccapurple; */
+  padding-top: 5em;
+}
+.img-porfil {
+  width: 15em;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 1.5em;
+}
+.title-name {
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--Text3);
+  margin-bottom: 0.3em;
+}
+.description-porfil {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: var(--Text3);
+  margin-bottom: 1em;
+}
+.description-porfil span {
+  margin: 0 2px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background-color: var(--secundariColor);
+}
+.wrap-icon-social {
+  border-radius: 50%;
+  padding: 7px 5px;
+  background-color: transparent;
+  transition: 0.3s all ease;
+  border: 1px solid var(--Text3);
+}
+.wrap-icon-social:hover {
+  background-color: var(--secundariColor);
+}
+.wrap-redesSociales {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 7em;
+}
+.wrap-redesSociales a {
+  margin: 0 5px;
+  font-size: 1.2em;
+  color: var(--Text3);
+}
+.wrap-links-page {
+  font-size: 1.3em;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+.wrap-links-page a:hover {
+  color: var(--secundariColor);
+  transition: 0.4s all ease;
+}
+.wrap-links-page a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: var(--Text3);
+}
+/* MAIN INFO */
+.main-porfil {
+  padding: 0 0.5em;
+}
+.wrap-main-img-porfil {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+.main-img-porfil {
+  width: 15em;
+  border-radius: 10px;
+}
+.main-title-porfil {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.full-info-porfil {
+  color: var(--Text);
+  line-height: 1.3em;
+  white-space: 2em;
+  letter-spacing: 0.3px;
+  position: relative;
+}
+.collapse {
+  height: 0px;
+  overflow: hidden;
+  transition: all 2s ease;
+}
+
+.show {
+  height: 100%;
+}
+.full-info-porfil p {
+  margin-bottom: 25px;
+}
+#btnShowMore {
+  display: block;
+  /* z-index: 99; */
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 0px;
+  text-align: center;
+  padding-top: 80px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 20%, #fff 100%);
+}
+#btnShowMore::before {
+  content: "Mostrar más";
+}
+#btnShowMore:hover::before {
+  transition: all 0.3s ease;
+  color: var(--secundariColor);
+}
+#btnShowMore.expanded::before {
+  content: "Mostrar menos";
+}
+#btnShowMore.expanded {
+  bottom: -20px;
+  padding-top: 10px;
+  background: transparent;
+}
+/* Skills */
+.skills {
+  color: var(--Text);
+  margin-top: 3em;
+  padding-bottom: 1em;
+}
+.title-skills {
+  padding: 10px;
+  font-size: 21px;
+}
+.skills span {
+  display: inline-block;
+  margin: 5px 3px;
+  padding: 3px 10px;
+  border-radius: 30px;
+  background: rgba(96, 125, 139, 0.2);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
+.skills span:hover {
+  cursor: default;
+  color: var(--Text3);
+  background-color: var(--secundariColor);
+}
+/* works */
+.works {
+  background: var(--background);
+  padding: 0 0.5em 2em 0.5em;
+}
+.title-works {
+  display: block;
+  font-weight: 600;
+  padding: 2em 0;
+  font-size: 1.7em;
+  text-align: center;
+}
+.work-card {
+  margin-bottom: 0.5em;
+  position: relative;
+  overflow: hidden;
+}
+.title-card-work {
+  position: absolute;
+  font-size: 1.35em;
+  text-decoration: none;
+  font-weight: 800;
+  color: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.work-card img {
+  width: 100%;
+  transition: 0.5s all ease;
+}
+.work-card:hover .title-card-work {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.5s all ease;
+}
+/* .work-card:hover img {
+  transform: scale(1.1, 1.1);
+}
+ */
+/* responsive */
+@media screen and (min-width: 1000px) {
+  .wrap-info-porfil {
+    padding: 2em;
+    display: flex;
+    gap: 3em;
+    align-items: center;
+  }
+  .main-porfil {
+    height: 100vh;
+  }
+  .main-img-porfil {
+    width: 20em;
+    height: 20em;
+  }
+  .collapse {
+    height: 100%;
+  }
+  #btnShowMore::before {
+    content: "";
+  }
+  #btnShowMore {
+    background: transparent;
+  }
+}
+@media screen and (min-width: 700px) {
+  .wrap-work-card {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(auto-fill, 330px);
+    gap: 5px;
+    justify-content: center;
+  }
+}
