@@ -48,7 +48,7 @@ body::-webkit-scrollbar {
   margin-bottom: 1.5em;
 }
 .title-name {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 600;
   color: var(--Text3);
   margin-bottom: 0.3em;
@@ -67,7 +67,7 @@ body::-webkit-scrollbar {
 }
 .wrap-icon-social {
   border-radius: 50%;
-  padding: 7px 5px;
+  padding: 7px 10px;
   background-color: transparent;
   transition: 0.3s all ease;
   border: 1px solid var(--Text3);
